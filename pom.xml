@@ -10,8 +10,8 @@
     <version>1.0.0</version>
 
     <modules>
-        <module>api</module>
         <module>web</module>
+        <module>api</module>
     </modules>
 
     <properties>
