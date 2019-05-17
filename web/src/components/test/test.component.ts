@@ -17,7 +17,7 @@ export class TestComponent {
     let requestUrl = window.location.href.substr(0, window.location.href.length - 7);
 
 
-    this.http.get("http://localhost:8080/api/test").subscribe(resp => {
+    this.http.get("/api/test").subscribe(resp => {
       console.log('success!');
     }, err => {
       console.log(err);
