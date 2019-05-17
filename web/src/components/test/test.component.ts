@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'test',
@@ -14,10 +15,9 @@ export class TestComponent {
   }
 
   sendRequest() {
-    let requestUrl = window.location.href.substr(0, window.location.href.length - 7);
+    console.log(environment.API_URL);
 
-
-    this.http.get("/api/test").subscribe(resp => {
+    this.http.get(environment.API_URL + "/test").subscribe(resp => {
       console.log('success!');
     }, err => {
       console.log(err);
